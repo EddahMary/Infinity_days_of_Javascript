@@ -76,6 +76,52 @@ console.log(cars.slice(1, 3));
 console.log(cars);
 
 
+// asynchronous code
+console.log("Marya");
+// settimeout fn schedules a task to perform in future with the first part being the argument and the second part being the timeout(4000ms) that is time taken by the argument to display
+setTimeout(() => {
+  console.log("Having fun coding");
+}, 4000 );
+console.log("Johnes");
+
+
+//  Callback function
+console.log("Statement 1");
+console.log("Statement 2");
+console.log("Statement 3");
+getPerson(34, (person)=> {
+console.log("Person", person);
+getHobbies(person.age, (hobbies) => {
+  console.log(Hobbies,);
+  
+})
+});
+function getPerson (age, callback) {
+setTimeout(() => {
+  console.log("Fetching person's data from files"); 
+  callback({name:"Marya Johnes", age: 34, profession: "Teacher"})
+ }, 6000);
+// assuming we're getting data from files which takes 6sec
+}
+
+function getHobbies(age) {
+  setTimeout(() => {
+    console.log("Fetching person's hobbies");
+    callback(["Cooking", "Dancing", "Coding", "Travelling"])
+  }, 3000);
+  
+}
+
+
+  
+  
+
+
+
+
+
+
+
 
 
 
