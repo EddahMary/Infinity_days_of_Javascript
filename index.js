@@ -111,6 +111,27 @@ function getHobbies(age) {
   }, 3000);
   
 }
+// try catch implementation
+async function getData() {
+  try{
+const data = fetchProducts()
+console.log("name", marks);
+return data
+}
+catch (error) {
+  console.log(error);
+}
+}
+getData()
+
+// making an arrow function asynchronous we add the async keyword after the = 
+// Imitating api
+const fetchProducts = async()=> {
+  setTimeout(() => {
+      console.log("Fetchng data form database");
+  }, 5000);
+}
+
 
 
   
